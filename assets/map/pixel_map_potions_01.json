@@ -8,7 +8,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 10, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -466,7 +466,7 @@
                 {
                  "gid":28,
                  "height":64,
-                 "id":113,
+                 "id":128,
                  "name":"",
                  "properties":[
                         {
@@ -478,25 +478,7 @@
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":640,
-                 "y":386
-                }, 
-                {
-                 "gid":28,
-                 "height":64,
-                 "id":114,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"collides",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":704,
+                 "x":576,
                  "y":386
                 }, 
                 {
@@ -516,6 +498,24 @@
                  "width":64,
                  "x":768,
                  "y":450
+                }, 
+                {
+                 "gid":28,
+                 "height":64,
+                 "id":129,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":768,
+                 "y":386
                 }, 
                 {
                  "gid":28,
@@ -574,24 +574,6 @@
                 {
                  "gid":28,
                  "height":64,
-                 "id":121,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"collides",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":576,
-                 "y":386
-                }, 
-                {
-                 "gid":28,
-                 "height":64,
                  "id":122,
                  "name":"",
                  "properties":[
@@ -624,24 +606,6 @@
                  "width":64,
                  "x":704,
                  "y":322
-                }, 
-                {
-                 "gid":28,
-                 "height":64,
-                 "id":124,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"collides",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":768,
-                 "y":386
                 }, 
                 {
                  "gid":28,
@@ -787,7 +751,7 @@
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":128,
+ "nextobjectid":130,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.2",
