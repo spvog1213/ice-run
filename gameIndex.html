@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game List</title>
+  <style>
+    html, body, div, span, ul, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: lightblue;
+    }
+    div, ul, li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    div {
+      width: 100%;
+      height: 100%;
+    }
+    ul {
+      width: 80%;
+      height: 80%;
+      align-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    li {
+      width: 30%;
+      height: 30%;
+      border: 1px solid skyblue;
+      background-color: #f5feff;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li class="js-link" src="https://chlwjddn2.github.io/gold-miner/">황금 캐기</li>
+      <li class="js-link" src="https://jungwonyu.github.io/Mini-Flight/">아이스의 모험</li>
+      <li class="js-link" src="https://spvog1213.github.io/ice-run/">캔디런</li>
+      <li class="js-link" src="https://ds00324.github.io/ttangttameokgi/">꿀채우기</li>
+      <li class="js-link" src="https://ryian88.github.io/ship/">균형잡기</li>
+      <li class="js-link" src="">게이트볼</li>
+    </ul>
+  </div>
+  <script>
+    [...document.querySelectorAll('.js-link')].forEach(($) => {
+      $.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open($.getAttribute('src'));
+      });
+    });
+  </script>
+</body>
+</html>
