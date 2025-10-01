@@ -2,6 +2,10 @@
   font-family: DOSIyagiBoldface;
   src: url(./fonts/DOSIyagiBoldface.woff);
 }
+@font-face {
+  font-family: PFStardust;
+  src: url(./fonts/PFStardust_3.0_Bold.woff);
+}
 
 html, body, div, span, ul, ol, li {
   margin: 0;
@@ -26,8 +30,9 @@ body {
   align-items: center;
 }
 
+.tutorialContainer,
 .quizContainer {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -37,7 +42,10 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, .7);
 }
+.tutorialContainer.show,
+.quizContainer.show { display: flex; }
 
+/* quiz */
 .quizContainer .bg {
   width: 60vw;
   /* min-width: calc(1280px / 4); */
@@ -47,4 +55,49 @@ body {
   max-height: 70vh;
   background: #FFF;
   border-radius: 9vmin;
+}
+
+/* tutorial */
+.message {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: calc(50% - 15vw);
+  top: calc(50% - 8vw);
+  width: 30vw;
+  height: 15vw;
+  color: #000;
+  font-size: 4vmin;
+  font-family: PFStardust;
+	letter-spacing: 0.1vmin;
+	line-height: 6vmin;
+  text-align: center;
+  background: #FFF;
+  border-radius: 5vmin;
+}
+
+.key_up,
+.key_down {
+  display: inline-flex;
+  position: relative;
+  top: 0.8vw;
+  width: 3vw;
+  height: 3vw;
+  background: center / contain no-repeat;
+}
+.key_up { background-image: url(./assets/interface/key_up.png); }
+.key_down { background-image: url(./assets/interface/key_down.png); }
+
+[show="jump"] .message[type="jump"],
+[show="slide"] .message[type="slide"],
+[show="doubleJump"] .message[type="doubleJump"] { display: flex; }
+
+
+/* log */
+.logContainer {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  color: red;
 }

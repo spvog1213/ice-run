@@ -6,16 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css">
   <title>Ice Run</title>
-   <script src="./js/main.umd.cjs"></script>
 </head>
 
 <body>
   <div id="app">
     <div id="game-container"></div>
-    <div class="logContainer" style="position: absolute; top: 0; left: 0; color: red;"></div>
     <!-- <div class="quizContainer">
       <div class="bg"></div>
     </div> -->
+    <div class="tutorialContainer">
+      <div class="message" type="jump">
+        <p>바닥에 있는 장애물은 <br/>점프 버튼(<span class="key_up"></span>)을 눌러 <br/>점프로 피할 수 있어요.</p>
+      </div>
+      <div class="message" type="slide">
+        <p>위에 있는 장애물은 <br/>슬라이딩 버튼(<span class="key_down"></span>)을 눌러 <br/>슬라이딩으로 피할 수 있어요.</p>
+      </div>
+      <div class="message" type="doublejump">
+        <p>점프 버튼을 연속으로 2번 눌러 <br/>2층에 올라갈 수 있어요.</p>
+      </div>
+    </div>
+    <div class="logContainer"></div>
   </div>
+  <script src="./js/main.umd.cjs"></script>
 </body>
 </html>
