@@ -63,10 +63,11 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: calc(50% - 15vw);
-  top: calc(50% - 8vw);
-  width: 30vw;
-  height: 15vw;
+  left: calc(50% - 25vmin);
+  top: calc(50% - 15vmin);
+  width: 50vmin;
+  /* max-width: calc(100vh * 1.1); */
+  height: 30vmin;
   color: #000;
   font-size: 4vmin;
   font-family: PFStardust;
