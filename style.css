@@ -48,10 +48,8 @@ body {
 /* quiz */
 .quizContainer .bg {
   width: 60vw;
-  /* min-width: calc(1280px / 4); */
   max-width: calc(100vh * 1.1);
   height: 40vw;
-  /* min-height: calc(720px / 4); */
   max-height: 70vh;
   background: #FFF;
   border-radius: 9vmin;
@@ -63,10 +61,9 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: calc(50% - 25vmin);
+  left: calc(50% - 30vmin);
   top: calc(50% - 15vmin);
-  width: 50vmin;
-  /* max-width: calc(100vh * 1.1); */
+  width: 60vmin;
   height: 30vmin;
   color: #000;
   font-size: 4vmin;
