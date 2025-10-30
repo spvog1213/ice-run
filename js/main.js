@@ -108099,37 +108099,22 @@ class Oe extends Ct.Scene {
   }
   create() {
     const { width: st, height: K } = this.scale, k = this.add.rectangle(0, 0, st, K, 13234170).setOrigin(0, 0), _ = this.add.image(st / 2, K / 2, "logo").setAlpha(0);
-    _.setY(_.y + 100), this.tweens.add({
+    _.setY(_.y + 100), this.addTweens({
       targets: _,
       alpha: 1,
       y: "-=120",
       duration: 150,
-      ease: "ease-in-out",
-      repeat: 0,
       onComplete: () => {
-        this.tweens.add({
+        this.addTweens({
           targets: _,
           alpha: 1,
           y: "+=20",
-          duration: 100,
-          ease: "ease-in-out",
-          repeat: 0
+          duration: 100
         });
       }
     }), this.time.delayedCall(1200, () => {
-      this.tweens.add({
-        targets: _,
-        alpha: 0,
-        duration: 200,
-        ease: "ease-in-out",
-        repeat: 0
-      }), this.tweens.add({
-        targets: k,
-        alpha: 0,
-        duration: 200,
-        ease: "ease-in-out",
-        repeat: 0
-      });
+      const at = { alpha: 0, duration: 200 };
+      this.addTweens({ targets: _, ...at }), this.addTweens({ targets: k, ...at });
     }), this.time.delayedCall(1500, () => {
       this.scene.start("MainMenu");
     });
@@ -108793,6 +108778,13 @@ class Ue extends Ct.Scene {
     this.sound.stopAll(), this.sound.play("button");
   }
 }
+Ct.Scene.prototype.addTweens = function(ut) {
+  this.tweens.add({
+    ease: "ease-in-out",
+    repeat: 0,
+    ...ut
+  });
+};
 const Xe = {
   type: Ct.AUTO,
   width: 22 * gt,
