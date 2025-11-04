@@ -108095,7 +108095,7 @@ class Ie extends Ct.Scene {
     super("Boot");
   }
   preload() {
-    this.load.spritesheet(Jt, "assets/players/ice/ice_spritesheet.png", { frameWidth: qt.width, frameHeight: qt.height });
+    this.load.spritesheet(Jt, "assets/players/ice/ice_spritesheet.png", { frameWidth: qt.width, frameHeight: qt.height }), this.load.image("logo", "assets/icecandy_logo.png");
   }
   create() {
     const { width: st, height: K } = this.scale, k = this.add.rectangle(0, 0, st, K, 13234170).setOrigin(0, 0), tt = this.add.image(st / 2, K / 2, "logo").setAlpha(0);
