@@ -1,6 +1,6 @@
 var re = Object.defineProperty;
-var ae = (ut, st, Z) => st in ut ? re(ut, st, { enumerable: !0, configurable: !0, writable: !0, value: Z }) : ut[st] = Z;
-var St = (ut, st, Z) => ae(ut, typeof st != "symbol" ? st + "" : st, Z);
+var ae = (ut, it, Z) => it in ut ? re(ut, it, { enumerable: !0, configurable: !0, writable: !0, value: Z }) : ut[it] = Z;
+var St = (ut, it, Z) => ae(ut, typeof it != "symbol" ? it + "" : it, Z);
 const Tt = "assets/interface/", Xt = "assets/spritesheet/", oe = "assets/sound/music/", he = "assets/sound/effect/";
 const $t = { x: 1e3, y: 1500 }, le = 8.5, ue = 10, fe = 30, de = [10, 20, 30], jt = 6e3, ve = 0.5, ce = 100, pe = 0.5, me = 7, Yt = "update-score", Ut = "update-hp", Wt = "update-music", Ot = "update-game", gt = 64, Ht = {
   name: "pixel_map_start",
@@ -52,9 +52,9 @@ function Fe(ut) {
 }
 var Gt = { exports: {} }, Le = Gt.exports, te;
 function Oe() {
-  return te || (te = 1, function(ut, st) {
-    (function(k, tt) {
-      ut.exports = tt();
+  return te || (te = 1, function(ut, it) {
+    (function(k, _) {
+      ut.exports = _();
     })(Le, () => (
       /******/
       (() => {
@@ -15018,13 +15018,13 @@ function Oe() {
                   }
                   if (T = f[y], !!T) {
                     if (E = x, M = g, F !== null) {
-                      var it = T.kerning[w];
-                      E += it !== void 0 ? it : 0;
+                      var st = T.kerning[w];
+                      E += st !== void 0 ? st : 0;
                     }
                     o > E && (o = E), i > M && (i = M);
                     var nt = E + T.xAdvance, $ = M + u;
                     a < nt && (a = nt), l < $ && (l = $);
-                    var q = T.xOffset + T.xAdvance + (it !== void 0 ? it : 0);
+                    var q = T.xOffset + T.xAdvance + (st !== void 0 ? st : 0);
                     y === s ? V !== null && (X.push({
                       word: V.word,
                       i: V.i,
@@ -15046,7 +15046,7 @@ function Oe() {
                       b: u * P,
                       line: D,
                       glyph: T
-                    }), x += T.xAdvance + v + (it !== void 0 ? it : 0), F = T, w = y, B = nt * P, et++;
+                    }), x += T.xAdvance + v + (st !== void 0 ? st : 0), F = T, w = y, B = nt * P, et++;
                   }
                 }
                 if (V !== null && X.push({
@@ -15057,8 +15057,8 @@ function Oe() {
                   w: V.w * A,
                   h: V.h * R
                 }), I[D] = B, B > N && (N = B), B < U && (U = B), C > 0)
-                  for (var _ = 0; _ < z.length; _++) {
-                    var at = z[_];
+                  for (var tt = 0; tt < z.length; tt++) {
+                    var at = z[tt];
                     if (C === 1) {
                       var lt = (N - I[at.line]) / 2;
                       at.x += lt, at.r += lt;
@@ -15526,25 +15526,25 @@ function Oe() {
                   s.maxWidth > 0 && (a = j.wrappedText, l = a.length);
                   var J = s._bounds.lines;
                   K === 1 ? Q = (J.longest - J.lengths[0]) / 2 : K === 2 && (Q = J.longest - J.lengths[0]);
-                  for (var et = o.roundPixels, it = s.displayCallback, nt = s.callbackData, $ = 0; $ < l; $++) {
+                  for (var et = o.roundPixels, st = s.displayCallback, nt = s.callbackData, $ = 0; $ < l; $++) {
                     if (I = a.charCodeAt($), I === 10) {
                       b++, K === 1 ? Q = (J.longest - J.lengths[b]) / 2 : K === 2 && (Q = J.longest - J.lengths[b]), F = 0, w += Y, G = null;
                       continue;
                     }
                     if (D = V[I], !!D) {
                       B = D.width, L = D.height;
-                      var q = D.xOffset + F - O, _ = D.yOffset + w - X;
+                      var q = D.xOffset + F - O, tt = D.yOffset + w - X;
                       if (G !== null) {
                         var at = D.kerning[U] || 0;
                         q += at, F += at;
                       }
                       if (F += D.xAdvance + N, G = D, U = I, !(B === 0 || L === 0 || I === 32)) {
-                        if (W = s.fontSize / s.fontData.size, H = 0, it) {
-                          nt.color = 0, nt.tint.topLeft = E, nt.tint.topRight = M, nt.tint.bottomLeft = P, nt.tint.bottomRight = A, nt.index = $, nt.charCode = I, nt.x = q, nt.y = _, nt.scale = W, nt.rotation = H, nt.data = D.data;
-                          var lt = it(nt);
-                          q = lt.x, _ = lt.y, W = lt.scale, H = lt.rotation, lt.color ? (E = lt.color, M = lt.color, P = lt.color, A = lt.color) : (E = lt.tint.topLeft, M = lt.tint.topRight, P = lt.tint.bottomLeft, A = lt.tint.bottomRight), E = h.getTintAppendFloatAlpha(E, o.alpha * s._alphaTL), M = h.getTintAppendFloatAlpha(M, o.alpha * s._alphaTR), P = h.getTintAppendFloatAlpha(P, o.alpha * s._alphaBL), A = h.getTintAppendFloatAlpha(A, o.alpha * s._alphaBR);
+                        if (W = s.fontSize / s.fontData.size, H = 0, st) {
+                          nt.color = 0, nt.tint.topLeft = E, nt.tint.topRight = M, nt.tint.bottomLeft = P, nt.tint.bottomRight = A, nt.index = $, nt.charCode = I, nt.x = q, nt.y = tt, nt.scale = W, nt.rotation = H, nt.data = D.data;
+                          var lt = st(nt);
+                          q = lt.x, tt = lt.y, W = lt.scale, H = lt.rotation, lt.color ? (E = lt.color, M = lt.color, P = lt.color, A = lt.color) : (E = lt.tint.topLeft, M = lt.tint.topRight, P = lt.tint.bottomLeft, A = lt.tint.bottomRight), E = h.getTintAppendFloatAlpha(E, o.alpha * s._alphaTL), M = h.getTintAppendFloatAlpha(M, o.alpha * s._alphaTR), P = h.getTintAppendFloatAlpha(P, o.alpha * s._alphaBL), A = h.getTintAppendFloatAlpha(A, o.alpha * s._alphaBR);
                         }
-                        q *= W, _ *= W, q -= s.displayOriginX, _ -= s.displayOriginY, q += Q, x.applyITRS(q, _, H, W, W), m.multiply(x, v);
+                        q *= W, tt *= W, q -= s.displayOriginX, tt -= s.displayOriginY, q += Q, x.applyITRS(q, tt, H, W, W), m.multiply(x, v);
                         var dt = D.u0, ot = D.v0, ht = D.u1, vt = D.v1, mt = B, ft = L, ct = v.e, pt = v.f, xt = ft * v.c + v.e, At = ft * v.d + v.f, Mt = mt * v.a + ft * v.c + v.e, Rt = mt * v.b + ft * v.d + v.f, Ft = mt * v.a + v.e, Lt = mt * v.b + v.f;
                         et && (ct = Math.round(ct), pt = Math.round(pt), xt = Math.round(xt), At = Math.round(At), Mt = Math.round(Mt), Rt = Math.round(Rt), Ft = Math.round(Ft), Lt = Math.round(Lt)), f.shouldFlush(6) && (f.flush(), R = f.setGameObject(s)), f.batchQuad(s, ct, pt, xt, At, Mt, Rt, Ft, Lt, dt, ot, ht, vt, E, M, P, A, C, T, R);
                       }
@@ -24250,10 +24250,10 @@ function Oe() {
                         break;
                       }
                       case d.ARC: {
-                        var j = 0, J = g[++L], et = g[++L], it = g[++L], nt = g[++L], $ = g[++L], q = g[++L], _ = g[++L];
-                        for ($ -= nt, q ? $ < -F ? $ = -F : $ > 0 && ($ = -F + $ % F) : $ > F ? $ = F : $ < 0 && ($ = F + $ % F), D === null && (D = new e(J + Math.cos(nt) * it, et + Math.sin(nt) * it, T), I.push(D), j += R); j < 1 + _; )
-                          A = $ * j + nt, M = J + Math.cos(A) * it, P = et + Math.sin(A) * it, D.points.push(new n(M, P, T)), j += R;
-                        A = $ + nt, M = J + Math.cos(A) * it, P = et + Math.sin(A) * it, D.points.push(new n(M, P, T));
+                        var j = 0, J = g[++L], et = g[++L], st = g[++L], nt = g[++L], $ = g[++L], q = g[++L], tt = g[++L];
+                        for ($ -= nt, q ? $ < -F ? $ = -F : $ > 0 && ($ = -F + $ % F) : $ > F ? $ = F : $ < 0 && ($ = F + $ % F), D === null && (D = new e(J + Math.cos(nt) * st, et + Math.sin(nt) * st, T), I.push(D), j += R); j < 1 + tt; )
+                          A = $ * j + nt, M = J + Math.cos(A) * st, P = et + Math.sin(A) * st, D.points.push(new n(M, P, T)), j += R;
+                        A = $ + nt, M = J + Math.cos(A) * st, P = et + Math.sin(A) * st, D.points.push(new n(M, P, T));
                         break;
                       }
                       case d.FILL_RECT: {
@@ -24458,11 +24458,11 @@ function Oe() {
                     d.SetDepth(T, J, et);
                   }
                   if (o(v, "setScrollFactor")) {
-                    var it = s(v, "setScrollFactor.x", 1), nt = s(v, "setScrollFactor.y", it), $ = s(v, "setScrollFactor.stepX", 0), q = s(v, "setScrollFactor.stepY", 0);
-                    d.SetScrollFactor(T, it, nt, $, q);
+                    var st = s(v, "setScrollFactor.x", 1), nt = s(v, "setScrollFactor.y", st), $ = s(v, "setScrollFactor.stepX", 0), q = s(v, "setScrollFactor.stepY", 0);
+                    d.SetScrollFactor(T, st, nt, $, q);
                   }
-                  var _ = e(v, "hitArea", null), at = e(v, "hitAreaCallback", null);
-                  _ && d.SetHitArea(T, _, at);
+                  var tt = e(v, "hitArea", null), at = e(v, "hitAreaCallback", null);
+                  tt && d.SetHitArea(T, tt, at);
                   var lt = e(v, "gridAlign", !1);
                   return lt && d.GridAlign(T, lt), this.createMultipleCallback && this.createMultipleCallback.call(this, T), T;
                 },
@@ -42253,14 +42253,14 @@ function Oe() {
                 else if (!f)
                   return D;
                 B || (B = f.get(u)), !N && R && f && l && (v = B.width / l.height, m = B.height / l.height);
-                var L = v / 2, G = m / 2, O = Math.floor(x), X = Math.floor(g), z = O + 1, V = X + 1, Y = v / O, W = m / X, H = [], K = [], b, Q, j = 0, J = 1, et = 0, it = 1;
-                B && (j = B.u0, J = B.u1, U ? (et = B.v1, it = B.v0) : (et = B.v0, it = B.v1));
-                var nt = J - j, $ = it - et;
+                var L = v / 2, G = m / 2, O = Math.floor(x), X = Math.floor(g), z = O + 1, V = X + 1, Y = v / O, W = m / X, H = [], K = [], b, Q, j = 0, J = 1, et = 0, st = 1;
+                B && (j = B.u0, J = B.u1, U ? (et = B.v1, st = B.v0) : (et = B.v0, st = B.v1));
+                var nt = J - j, $ = st - et;
                 for (Q = 0; Q < V; Q++) {
                   var q = Q * W - G;
                   for (b = 0; b < z; b++) {
-                    var _ = b * Y - L;
-                    K.push(_, -q);
+                    var tt = b * Y - L;
+                    K.push(tt, -q);
                     var at = j + nt * (b / O), lt = et + $ * (Q / X);
                     H.push(at, lt);
                   }
@@ -42270,7 +42270,7 @@ function Oe() {
                 for (Q = 0; Q < X; Q++)
                   for (b = 0; b < O; b++) {
                     var ht = (b + z * Q) * 2, vt = (b + z * (Q + 1)) * 2, mt = (b + 1 + z * (Q + 1)) * 2, ft = (b + 1 + z * Q) * 2, ct = F[ot], pt = w[dt], xt = new n(K[ht], K[ht + 1], 0, H[ht], H[ht + 1], ct, pt).transformMat4(o), At = new n(K[vt], K[vt + 1], 0, H[vt], H[vt + 1], ct, pt).transformMat4(o), Mt = new n(K[ft], K[ft + 1], 0, H[ft], H[ft + 1], ct, pt).transformMat4(o), Rt = new n(K[vt], K[vt + 1], 0, H[vt], H[vt + 1], ct, pt).transformMat4(o), Ft = new n(K[mt], K[mt + 1], 0, H[mt], H[mt + 1], ct, pt).transformMat4(o), Lt = new n(K[ft], K[ft + 1], 0, H[ft], H[ft + 1], ct, pt).transformMat4(o);
-                    I && (xt.setUVs(j, it), At.setUVs(j, et), Mt.setUVs(J, it), Rt.setUVs(j, et), Ft.setUVs(J, et), Lt.setUVs(J, it)), ot++, ot === F.length && (ot = 0), dt++, dt === w.length && (dt = 0), D.verts.push(xt, At, Mt, Rt, Ft, Lt), D.faces.push(
+                    I && (xt.setUVs(j, st), At.setUVs(j, et), Mt.setUVs(J, st), Rt.setUVs(j, et), Ft.setUVs(J, et), Lt.setUVs(J, st)), ot++, ot === F.length && (ot = 0), dt++, dt === w.length && (dt = 0), D.verts.push(xt, At, Mt, Rt, Ft, Lt), D.faces.push(
                       new d(xt, At, Mt),
                       new d(Rt, Ft, Lt)
                     );
@@ -43099,11 +43099,11 @@ function Oe() {
               function r(D, B, L, G) {
                 var O = D.prev, X = D, z = D.next;
                 if (y(O, X, z) >= 0) return !1;
-                for (var V = O.x, Y = X.x, W = z.x, H = O.y, K = X.y, b = z.y, Q = V < Y ? V < W ? V : W : Y < W ? Y : W, j = H < K ? H < b ? H : b : K < b ? K : b, J = V > Y ? V > W ? V : W : Y > W ? Y : W, et = H > K ? H > b ? H : b : K > b ? K : b, it = v(Q, j, B, L, G), nt = v(J, et, B, L, G), $ = D.prevZ, q = D.nextZ; $ && $.z >= it && q && q.z <= nt; ) {
+                for (var V = O.x, Y = X.x, W = z.x, H = O.y, K = X.y, b = z.y, Q = V < Y ? V < W ? V : W : Y < W ? Y : W, j = H < K ? H < b ? H : b : K < b ? K : b, J = V > Y ? V > W ? V : W : Y > W ? Y : W, et = H > K ? H > b ? H : b : K > b ? K : b, st = v(Q, j, B, L, G), nt = v(J, et, B, L, G), $ = D.prevZ, q = D.nextZ; $ && $.z >= st && q && q.z <= nt; ) {
                   if ($.x >= Q && $.x <= J && $.y >= j && $.y <= et && $ !== O && $ !== z && x(V, H, Y, K, W, b, $.x, $.y) && y($.prev, $, $.next) >= 0 || ($ = $.prevZ, q.x >= Q && q.x <= J && q.y >= j && q.y <= et && q !== O && q !== z && x(V, H, Y, K, W, b, q.x, q.y) && y(q.prev, q, q.next) >= 0)) return !1;
                   q = q.nextZ;
                 }
-                for (; $ && $.z >= it; ) {
+                for (; $ && $.z >= st; ) {
                   if ($.x >= Q && $.x <= J && $.y >= j && $.y <= et && $ !== O && $ !== z && x(V, H, Y, K, W, b, $.x, $.y) && y($.prev, $, $.next) >= 0) return !1;
                   $ = $.prevZ;
                 }
@@ -64736,8 +64736,8 @@ return new ` + this.key + `();
                   var X = L.isCircle, z = G.isCircle, V = L.center, Y = G.center, W = L.immovable, H = G.immovable, K = L.velocity, b = G.velocity, Q = 0, j = !0;
                   if (X !== z) {
                     j = !1;
-                    var J = V.x, et = V.y, it = L.halfWidth, nt = G.position.x, $ = G.position.y, q = G.right, _ = G.bottom;
-                    z && (J = Y.x, et = Y.y, it = G.halfWidth, nt = L.position.x, $ = L.position.y, q = L.right, _ = L.bottom), et < $ ? J < nt ? Q = s(J, et, nt, $) - it : J > q && (Q = s(J, et, q, $) - it) : et > _ && (J < nt ? Q = s(J, et, nt, _) - it : J > q && (Q = s(J, et, q, _) - it)), Q *= -1;
+                    var J = V.x, et = V.y, st = L.halfWidth, nt = G.position.x, $ = G.position.y, q = G.right, tt = G.bottom;
+                    z && (J = Y.x, et = Y.y, st = G.halfWidth, nt = L.position.x, $ = L.position.y, q = L.right, tt = L.bottom), et < $ ? J < nt ? Q = s(J, et, nt, $) - st : J > q && (Q = s(J, et, q, $) - st) : et > tt && (J < nt ? Q = s(J, et, nt, tt) - st : J > q && (Q = s(J, et, q, tt) - st)), Q *= -1;
                   } else
                     Q = L.halfWidth + G.halfWidth - o(V, Y);
                   L.overlapR = Q, G.overlapR = Q;
@@ -72049,8 +72049,8 @@ return new ` + this.key + `();
                     if (!(!T.isActive || T.isSensor)) {
                       var C = T.collision, E = C.parentA, M = C.parentB, P = C.normal.x, A = C.normal.y, R = C.tangent.x, F = C.tangent.y, w = T.inverseMass, I = T.friction * T.frictionStatic * f, U = T.contacts, N = T.contactCount, D = 1 / N, B = E.position.x - E.positionPrev.x, L = E.position.y - E.positionPrev.y, G = E.angle - E.anglePrev, O = M.position.x - M.positionPrev.x, X = M.position.y - M.positionPrev.y, z = M.angle - M.anglePrev;
                       for (y = 0; y < N; y++) {
-                        var V = U[y], Y = V.vertex, W = Y.x - E.position.x, H = Y.y - E.position.y, K = Y.x - M.position.x, b = Y.y - M.position.y, Q = B - H * G, j = L + W * G, J = O - b * z, et = X + K * z, it = Q - J, nt = j - et, $ = P * it + A * nt, q = R * it + F * nt, _ = T.separation + $, at = Math.min(_, 1);
-                        at = _ < 0 ? 0 : at;
+                        var V = U[y], Y = V.vertex, W = Y.x - E.position.x, H = Y.y - E.position.y, K = Y.x - M.position.x, b = Y.y - M.position.y, Q = B - H * G, j = L + W * G, J = O - b * z, et = X + K * z, st = Q - J, nt = j - et, $ = P * st + A * nt, q = R * st + F * nt, tt = T.separation + $, at = Math.min(tt, 1);
+                        at = tt < 0 ? 0 : at;
                         var lt = at * I;
                         q < -lt || q > lt ? (x = q > 0 ? q : -q, m = T.friction * (q > 0 ? 1 : -1) * i, m < -x ? m = -x : m > x && (m = x)) : (m = q, x = u);
                         var dt = W * A - H * P, ot = K * A - b * P, ht = D / (w + E.inverseInertia * dt * dt + M.inverseInertia * ot * ot), vt = (1 + T.restitution) * $ * ht;
@@ -73517,26 +73517,26 @@ return new ` + this.key + `();
               }
               function F(D, B, L, G, O, X, z) {
                 X = X || 100, z = z || 0, O = O || 25, B = typeof B < "u" ? B : [], L = L || [], G = G || [];
-                var V = [0, 0], Y = [0, 0], W = [0, 0], H = 0, K = 0, b = 0, Q = 0, j = 0, J = 0, et = 0, it = [], nt = [], $ = D, q = D;
+                var V = [0, 0], Y = [0, 0], W = [0, 0], H = 0, K = 0, b = 0, Q = 0, j = 0, J = 0, et = 0, st = [], nt = [], $ = D, q = D;
                 if (q.length < 3)
                   return B;
                 if (z++, z > X)
                   return console.warn("quickDecomp: max level (" + X + ") reached."), B;
-                for (var _ = 0; _ < D.length; ++_)
-                  if (m($, _)) {
-                    L.push($[_]), H = K = Number.MAX_VALUE;
+                for (var tt = 0; tt < D.length; ++tt)
+                  if (m($, tt)) {
+                    L.push($[tt]), H = K = Number.MAX_VALUE;
                     for (var at = 0; at < D.length; ++at)
-                      c(a($, _ - 1), a($, _), a($, at)) && n(a($, _ - 1), a($, _), a($, at - 1)) && (W = R(a($, _ - 1), a($, _), a($, at), a($, at - 1)), r(a($, _ + 1), a($, _), W) && (b = i($[_], W), b < K && (K = b, Y = W, J = at))), c(a($, _ + 1), a($, _), a($, at + 1)) && n(a($, _ + 1), a($, _), a($, at)) && (W = R(a($, _ + 1), a($, _), a($, at), a($, at + 1)), c(a($, _ - 1), a($, _), W) && (b = i($[_], W), b < H && (H = b, V = W, j = at)));
+                      c(a($, tt - 1), a($, tt), a($, at)) && n(a($, tt - 1), a($, tt), a($, at - 1)) && (W = R(a($, tt - 1), a($, tt), a($, at), a($, at - 1)), r(a($, tt + 1), a($, tt), W) && (b = i($[tt], W), b < K && (K = b, Y = W, J = at))), c(a($, tt + 1), a($, tt), a($, at + 1)) && n(a($, tt + 1), a($, tt), a($, at)) && (W = R(a($, tt + 1), a($, tt), a($, at), a($, at + 1)), c(a($, tt - 1), a($, tt), W) && (b = i($[tt], W), b < H && (H = b, V = W, j = at)));
                     if (J === (j + 1) % D.length)
-                      W[0] = (Y[0] + V[0]) / 2, W[1] = (Y[1] + V[1]) / 2, G.push(W), _ < j ? (f(it, $, _, j + 1), it.push(W), nt.push(W), J !== 0 && f(nt, $, J, $.length), f(nt, $, 0, _ + 1)) : (_ !== 0 && f(it, $, _, $.length), f(it, $, 0, j + 1), it.push(W), nt.push(W), f(nt, $, J, _ + 1));
+                      W[0] = (Y[0] + V[0]) / 2, W[1] = (Y[1] + V[1]) / 2, G.push(W), tt < j ? (f(st, $, tt, j + 1), st.push(W), nt.push(W), J !== 0 && f(nt, $, J, $.length), f(nt, $, 0, tt + 1)) : (tt !== 0 && f(st, $, tt, $.length), f(st, $, 0, j + 1), st.push(W), nt.push(W), f(nt, $, J, tt + 1));
                     else {
                       if (J > j && (j += D.length), Q = Number.MAX_VALUE, j < J)
                         return B;
                       for (var at = J; at <= j; ++at)
-                        h(a($, _ - 1), a($, _), a($, at)) && n(a($, _ + 1), a($, _), a($, at)) && (b = i(a($, _), a($, at)), b < Q && T($, _, at) && (Q = b, et = at % D.length));
-                      _ < et ? (f(it, $, _, et + 1), et !== 0 && f(nt, $, et, q.length), f(nt, $, 0, _ + 1)) : (_ !== 0 && f(it, $, _, q.length), f(it, $, 0, et + 1), f(nt, $, et, _ + 1));
+                        h(a($, tt - 1), a($, tt), a($, at)) && n(a($, tt + 1), a($, tt), a($, at)) && (b = i(a($, tt), a($, at)), b < Q && T($, tt, at) && (Q = b, et = at % D.length));
+                      tt < et ? (f(st, $, tt, et + 1), et !== 0 && f(nt, $, et, q.length), f(nt, $, 0, tt + 1)) : (tt !== 0 && f(st, $, tt, q.length), f(st, $, 0, et + 1), f(nt, $, et, tt + 1));
                     }
-                    return it.length < nt.length ? (F(it, B, L, G, O, X, z), F(nt, B, L, G, O, X, z)) : (F(nt, B, L, G, O, X, z), F(it, B, L, G, O, X, z)), B;
+                    return st.length < nt.length ? (F(st, B, L, G, O, X, z), F(nt, B, L, G, O, X, z)) : (F(nt, B, L, G, O, X, z), F(st, B, L, G, O, X, z)), B;
                   }
                 return B.push(D), B;
               }
@@ -80702,16 +80702,16 @@ return new ` + this.key + `();
                  */
                 batchTexture: function(l, f, u, v, m, x, g, y, T, C, E, M, P, A, R, F, w, I, U, N, D, B, L, G, O, X, z, V, Y, W, H, K, b) {
                   b === void 0 && (b = !1), this.manager.set(this, l);
-                  var Q = this._tempMatrix1, j = this._tempMatrix2, J = this._tempMatrix3, et = I / u + z, it = U / v + V, nt = (I + N) / u + z, $ = (U + D) / v + V, q = g, _ = y, at = -F, lt = -w;
+                  var Q = this._tempMatrix1, j = this._tempMatrix2, J = this._tempMatrix3, et = I / u + z, st = U / v + V, nt = (I + N) / u + z, $ = (U + D) / v + V, q = g, tt = y, at = -F, lt = -w;
                   if (l.isCropped) {
                     var dt = l._crop, ot = dt.width, ht = dt.height;
-                    q = ot, _ = ht, g = ot, y = ht, I = dt.x, U = dt.y;
+                    q = ot, tt = ht, g = ot, y = ht, I = dt.x, U = dt.y;
                     var vt = I, mt = U;
-                    M && (vt = N - dt.x - ot), P && (mt = D - dt.y - ht), et = vt / u + z, it = mt / v + V, nt = (vt + ot) / u + z, $ = (mt + ht) / v + V, at = -F + I, lt = -w + U;
+                    M && (vt = N - dt.x - ot), P && (mt = D - dt.y - ht), et = vt / u + z, st = mt / v + V, nt = (vt + ot) / u + z, $ = (mt + ht) / v + V, at = -F + I, lt = -w + U;
                   }
-                  P = P ^ (!H && f.isRenderTexture ? 1 : 0), M && (q *= -1, at += g), P && (_ *= -1, lt += y), Y.roundPixels && (m = Math.floor(m), x = Math.floor(x)), j.applyITRS(m, x, E, T, C), Q.copyFrom(Y.matrix), W ? (Q.multiplyWithOffset(W, -Y.scrollX * A, -Y.scrollY * R), j.e = m, j.f = x) : (j.e -= Y.scrollX * A, j.f -= Y.scrollY * R), Q.multiply(j, J);
-                  var ft = J.setQuad(at, lt, at + q, lt + _, Y.renderRoundPixels);
-                  K == null && (K = this.setTexture2D(f)), l && !b && this.manager.preBatch(l), this.batchQuad(l, ft[0], ft[1], ft[2], ft[3], ft[4], ft[5], ft[6], ft[7], et, it, nt, $, B, L, G, O, X, f, K), l && !b && this.manager.postBatch(l);
+                  P = P ^ (!H && f.isRenderTexture ? 1 : 0), M && (q *= -1, at += g), P && (tt *= -1, lt += y), Y.roundPixels && (m = Math.floor(m), x = Math.floor(x)), j.applyITRS(m, x, E, T, C), Q.copyFrom(Y.matrix), W ? (Q.multiplyWithOffset(W, -Y.scrollX * A, -Y.scrollY * R), j.e = m, j.f = x) : (j.e -= Y.scrollX * A, j.f -= Y.scrollY * R), Q.multiply(j, J);
+                  var ft = J.setQuad(at, lt, at + q, lt + tt, Y.renderRoundPixels);
+                  K == null && (K = this.setTexture2D(f)), l && !b && this.manager.preBatch(l), this.batchQuad(l, ft[0], ft[1], ft[2], ft[3], ft[4], ft[5], ft[6], ft[7], et, st, nt, $, B, L, G, O, X, f, K), l && !b && this.manager.postBatch(l);
                 },
                 /**
                  * Adds a Texture Frame into the batch for rendering.
@@ -80891,10 +80891,10 @@ return new ` + this.key + `();
                   E && E.multiply(C, M);
                   var P = u - l, A = v - f, R = Math.sqrt(P * P + A * A);
                   if (R !== 0) {
-                    var F = m * (v - f) / R, w = m * (l - u) / R, I = x * (v - f) / R, U = x * (l - u) / R, N = u - I, D = v - U, B = l - F, L = f - w, G = u + I, O = v + U, X = l + F, z = f + w, V = M.getX(N, D), Y = M.getY(N, D), W = M.getX(B, L), H = M.getY(B, L), K = M.getX(G, O), b = M.getY(G, O), Q = M.getX(X, z), j = M.getY(X, z), J = this.strokeTint, et = J.TL, it = J.TR, nt = J.BL, $ = J.BR;
-                    if (this.batchQuad(null, Q, j, W, H, V, Y, K, b, 0, 0, 1, 1, et, it, nt, $, 2), !(g <= 2)) {
-                      var q = this.prevQuad, _ = this.firstQuad;
-                      y > 0 && q[4] ? this.batchQuad(null, Q, j, W, H, q[0], q[1], q[2], q[3], 0, 0, 1, 1, et, it, nt, $, 2) : (_[0] = Q, _[1] = j, _[2] = W, _[3] = H, _[4] = 1), T && _[4] ? this.batchQuad(null, V, Y, K, b, _[0], _[1], _[2], _[3], 0, 0, 1, 1, et, it, nt, $, 2) : (q[0] = V, q[1] = Y, q[2] = K, q[3] = b, q[4] = 1);
+                    var F = m * (v - f) / R, w = m * (l - u) / R, I = x * (v - f) / R, U = x * (l - u) / R, N = u - I, D = v - U, B = l - F, L = f - w, G = u + I, O = v + U, X = l + F, z = f + w, V = M.getX(N, D), Y = M.getY(N, D), W = M.getX(B, L), H = M.getY(B, L), K = M.getX(G, O), b = M.getY(G, O), Q = M.getX(X, z), j = M.getY(X, z), J = this.strokeTint, et = J.TL, st = J.TR, nt = J.BL, $ = J.BR;
+                    if (this.batchQuad(null, Q, j, W, H, V, Y, K, b, 0, 0, 1, 1, et, st, nt, $, 2), !(g <= 2)) {
+                      var q = this.prevQuad, tt = this.firstQuad;
+                      y > 0 && q[4] ? this.batchQuad(null, Q, j, W, H, q[0], q[1], q[2], q[3], 0, 0, 1, 1, et, st, nt, $, 2) : (tt[0] = Q, tt[1] = j, tt[2] = W, tt[3] = H, tt[4] = 1), T && tt[4] ? this.batchQuad(null, V, Y, K, b, tt[0], tt[1], tt[2], tt[3], 0, 0, 1, 1, et, st, nt, $, 2) : (q[0] = V, q[1] = Y, q[2] = K, q[3] = b, q[4] = 1);
                     }
                   }
                 },
@@ -81418,8 +81418,8 @@ return new ` + this.key + `();
                   c(j, Math.round(Y.centerX), Math.round(Y.centerY)), this.tempSprite = v;
                   var J = this.gl, et = this.renderer;
                   et.clearStencilMask(), this.setShader(this.drawSpriteShader), this.set1i("uMainSampler", 0), this.set2f("uResolution", et.width, et.height), this.flipProjectionMatrix(!0), v && (this.onDrawSprite(v, Q), v.preFX.onFX(this));
-                  var it = this.fsTarget;
-                  return this.flush(), J.viewport(0, 0, et.width, et.height), J.bindFramebuffer(J.FRAMEBUFFER, it.framebuffer.webGLFramebuffer), J.framebufferTexture2D(J.FRAMEBUFFER, J.COLOR_ATTACHMENT0, J.TEXTURE_2D, it.texture.webGLTexture, 0), J.clearColor(0, 0, 0, 0), J.clear(J.COLOR_BUFFER_BIT), this.setTexture2D(B), this.batchVert(m, x, P, A, 0, D, w), this.batchVert(g, y, P, F, 0, D, U), this.batchVert(T, C, R, F, 0, D, N), this.batchVert(m, x, P, A, 0, D, w), this.batchVert(T, C, R, F, 0, D, N), this.batchVert(E, M, R, A, 0, D, I), this.flush(), this.flipProjectionMatrix(!1), J.activeTexture(J.TEXTURE0), J.bindTexture(J.TEXTURE_2D, Q.texture.webGLTexture), J.copyTexSubImage2D(J.TEXTURE_2D, 0, 0, 0, j.x, j.y, j.width, j.height), J.bindFramebuffer(J.FRAMEBUFFER, null), J.bindTexture(J.TEXTURE_2D, null), this.onBatch(v), this.currentShader = this.copyShader, this.onDraw(Q, this.manager.getSwapRenderTarget(), this.manager.getAltSwapRenderTarget()), !0;
+                  var st = this.fsTarget;
+                  return this.flush(), J.viewport(0, 0, et.width, et.height), J.bindFramebuffer(J.FRAMEBUFFER, st.framebuffer.webGLFramebuffer), J.framebufferTexture2D(J.FRAMEBUFFER, J.COLOR_ATTACHMENT0, J.TEXTURE_2D, st.texture.webGLTexture, 0), J.clearColor(0, 0, 0, 0), J.clear(J.COLOR_BUFFER_BIT), this.setTexture2D(B), this.batchVert(m, x, P, A, 0, D, w), this.batchVert(g, y, P, F, 0, D, U), this.batchVert(T, C, R, F, 0, D, N), this.batchVert(m, x, P, A, 0, D, w), this.batchVert(T, C, R, F, 0, D, N), this.batchVert(E, M, R, A, 0, D, I), this.flush(), this.flipProjectionMatrix(!1), J.activeTexture(J.TEXTURE0), J.bindTexture(J.TEXTURE_2D, Q.texture.webGLTexture), J.copyTexSubImage2D(J.TEXTURE_2D, 0, 0, 0, j.x, j.y, j.width, j.height), J.bindFramebuffer(J.FRAMEBUFFER, null), J.bindTexture(J.TEXTURE_2D, null), this.onBatch(v), this.currentShader = this.copyShader, this.onDraw(Q, this.manager.getSwapRenderTarget(), this.manager.getAltSwapRenderTarget()), !0;
                 },
                 /**
                  * This callback is invoked when a sprite is drawn by this pipeline.
@@ -104097,11 +104097,11 @@ return new ` + this.key + `();
                 !T && y.targets && (T = y.targets);
                 for (var C = i(g), E = e(g, "delay", y.delay), M = e(g, "duration", y.duration), P = e(g, "easeParams", y.easeParams), A = e(g, "ease", y.ease), R = e(g, "hold", y.hold), F = e(g, "repeat", y.repeat), w = e(g, "repeatDelay", y.repeatDelay), I = r(g, "yoyo", y.yoyo), U = r(g, "flipX", y.flipX), N = r(g, "flipY", y.flipY), D = e(g, "interpolation", y.interpolation), B = function(b, Q, j, J) {
                   if (j === "texture") {
-                    var et = J, it = void 0;
-                    Array.isArray(J) ? (et = J[0], it = J[1]) : J.hasOwnProperty("value") ? (et = J.value, Array.isArray(J.value) ? (et = J.value[0], it = J.value[1]) : typeof J.value == "string" && (et = J.value)) : typeof J == "string" && (et = J), b.addFrame(
+                    var et = J, st = void 0;
+                    Array.isArray(J) ? (et = J[0], st = J[1]) : J.hasOwnProperty("value") ? (et = J.value, Array.isArray(J.value) ? (et = J.value[0], st = J.value[1]) : typeof J.value == "string" && (et = J.value)) : typeof J == "string" && (et = J), b.addFrame(
                       Q,
                       et,
-                      it,
+                      st,
                       o(J, "delay", E),
                       e(J, "duration", M),
                       e(J, "hold", R),
@@ -107909,7 +107909,7 @@ return new ` + this.key + `();
           )
           /******/
         }, k = {};
-        function tt(p) {
+        function _(p) {
           var S = k[p];
           if (S !== void 0)
             return S.exports;
@@ -107922,9 +107922,9 @@ return new ` + this.key + `();
             exports: {}
             /******/
           };
-          return Z[p](t, t.exports, tt), t.exports;
+          return Z[p](t, t.exports, _), t.exports;
         }
-        tt.g = function() {
+        _.g = function() {
           if (typeof globalThis == "object") return globalThis;
           try {
             return this || new Function("return this")();
@@ -107932,7 +107932,7 @@ return new ` + this.key + `();
             if (typeof window == "object") return window;
           }
         }();
-        var rt = tt(85454);
+        var rt = _(85454);
         return rt;
       })()
     ));
@@ -107940,17 +107940,20 @@ return new ` + this.key + `();
 }
 var Ct = Oe();
 const De = /* @__PURE__ */ Fe(Ct), yt = new De.Events.EventEmitter();
-function Nt(ut, st) {
-  return `${ut}_${String(st + 1).padStart(2, "0")}`;
+function Nt(ut, it) {
+  return `${ut}_${String(it + 1).padStart(2, "0")}`;
 }
-function ee(ut, st) {
-  ut.setScale(1), st.setScale(0);
+function ee(ut, it) {
+  ut.setScale(1), it.setScale(0);
 }
-function we(ut, st) {
-  return ut.tilesets.find(({ firstgid: Z, total: k }) => st >= Z && st < Z + k);
+function we(ut, it) {
+  return ut.tilesets.find(({ firstgid: Z, total: k }) => it >= Z && it < Z + k);
 }
 document.querySelector(".logContainer");
-class Be extends Ct.Scene {
+function Be() {
+  return navigator.userAgent.match(/iPad|iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || "ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch || !1;
+}
+class Ie extends Ct.Scene {
   constructor() {
     super("Interface");
     /** @type {boolean} 사용자가 BGM 재생을 원하는지 여부를 저장하는 상태값 */
@@ -107963,7 +107966,7 @@ class Be extends Ct.Scene {
    */
   create() {
     const Z = gt / 3;
-    this.lifeWarningCondition = [...Me], this.lifeWarningCondition.sort((k, tt) => k.hp - tt.hp), this.lifeWarningCondition.forEach((k) => k.activated = !1), this.createHealth(Z), this.createScore(Z), this.createButtons(Z), this.time.delayedCall(500, () => this.setStateBGM(!0));
+    this.lifeWarningCondition = [...Me], this.lifeWarningCondition.sort((k, _) => k.hp - _.hp), this.lifeWarningCondition.forEach((k) => k.activated = !1), this.createHealth(Z), this.createScore(Z), this.createButtons(Z), this.time.delayedCall(500, () => this.setStateBGM(!0));
   }
   /**
    * UI 이미지를 생성하는 헬퍼 메소드입니다.
@@ -107972,8 +107975,8 @@ class Be extends Ct.Scene {
    * @param {string} name - 이미지 키
    * @returns {Phaser.GameObjects.Image} 생성된 이미지 객체
    */
-  createImage(Z, k, tt) {
-    return this.add.image(Z, k, tt).setOrigin(0, 0).setScrollFactor(0);
+  createImage(Z, k, _) {
+    return this.add.image(Z, k, _).setOrigin(0, 0).setScrollFactor(0);
   }
   /**
    * 체력 바 UI를 생성합니다.
@@ -107982,10 +107985,10 @@ class Be extends Ct.Scene {
    */
   createHealth(Z) {
     this.hpIcon = this.createImage(Z, Z, "health");
-    const k = Z + this.hpIcon.width + 2, tt = Z + 20, rt = 5;
-    this.hpBorder = this.add.graphics({ fillStyle: { color: Pe } }).setScrollFactor(0), this.hpBorder.fillRoundedRect(k - rt, tt - rt, Dt + rt * 2, Bt + rt * 2, zt + rt), this.hpBg = this.add.graphics({ fillStyle: { color: Ae } }).setScrollFactor(0), this.hpBg.fillRoundedRect(k, tt, Dt, Bt, zt), this.hpFill = this.add.rectangle(k, tt, Dt, Bt, Vt).setOrigin(0, 0).setScrollFactor(0);
+    const k = Z + this.hpIcon.width + 2, _ = Z + 20, rt = 5;
+    this.hpBorder = this.add.graphics({ fillStyle: { color: Pe } }).setScrollFactor(0), this.hpBorder.fillRoundedRect(k - rt, _ - rt, Dt + rt * 2, Bt + rt * 2, zt + rt), this.hpBg = this.add.graphics({ fillStyle: { color: Ae } }).setScrollFactor(0), this.hpBg.fillRoundedRect(k, _, Dt, Bt, zt), this.hpFill = this.add.rectangle(k, _, Dt, Bt, Vt).setOrigin(0, 0).setScrollFactor(0);
     const p = this.make.graphics().setScrollFactor(0);
-    p.fillStyle(16777215), p.fillRoundedRect(k, tt, Dt, Bt, zt), this.hpFill.setMask(p.createGeometryMask()), yt.on(Ut, this.updateHealth, this), this.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {
+    p.fillStyle(16777215), p.fillRoundedRect(k, _, Dt, Bt, zt), this.hpFill.setMask(p.createGeometryMask()), yt.on(Ut, this.updateHealth, this), this.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {
       yt.off(Ut, this.updateHealth, this);
     });
   }
@@ -107998,9 +108001,9 @@ class Be extends Ct.Scene {
       fontSize: Ce,
       color: "#FFF",
       fontFamily: Ee
-    }, tt = gt * 14;
-    this.scoreIcon = this.createImage(tt, Z, "score");
-    const rt = tt + this.scoreIcon.width + Z;
+    }, _ = gt * 14;
+    this.scoreIcon = this.createImage(_, Z, "score");
+    const rt = _ + this.scoreIcon.width + Z;
     this.scoreText = this.add.text(rt, Z - 4, "0", k).setOrigin(0, 0).setScrollFactor(0), this.scoreText.setStroke("#000", 10), yt.on(Yt, this.updateScore, this), this.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {
       yt.off(Yt, this.updateScore, this);
     });
@@ -108010,8 +108013,8 @@ class Be extends Ct.Scene {
    * @param {number} margin - UI 요소 간의 간격
    */
   createButtons(Z) {
-    const k = this.scale.width - Z - qt, tt = k - qt - Z;
-    this.soundOffButton = this.createImage(k, Z, "soundOn").setInteractive({ useHandCursor: !0 }), this.soundOnButton = this.createImage(k, Z, "soundOff").setInteractive({ useHandCursor: !0 }), this.pauseButton = this.createImage(tt, Z, "pause").setInteractive({ useHandCursor: !0 }), this.playButton = this.createImage(tt, Z, "play").setInteractive({ useHandCursor: !0 }), this.soundOnButton.setScale(0), this.playButton.setScale(0), this.pauseButton.on("pointerdown", () => yt.emit(Ot, !1)), this.soundOnButton.on("pointerdown", () => this.playBGM()), this.soundOffButton.on("pointerdown", () => this.stopBGM()), yt.on(Wt, this.setStateBGM, this), yt.on(Ot, this.setStateGame, this), this.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {
+    const k = this.scale.width - Z - qt, _ = k - qt - Z;
+    this.soundOffButton = this.createImage(k, Z, "soundOn").setInteractive({ useHandCursor: !0 }), this.soundOnButton = this.createImage(k, Z, "soundOff").setInteractive({ useHandCursor: !0 }), this.pauseButton = this.createImage(_, Z, "pause").setInteractive({ useHandCursor: !0 }), this.playButton = this.createImage(_, Z, "play").setInteractive({ useHandCursor: !0 }), this.soundOnButton.setScale(0), this.playButton.setScale(0), this.pauseButton.on("pointerdown", () => yt.emit(Ot, !1)), this.soundOnButton.on("pointerdown", () => this.playBGM()), this.soundOffButton.on("pointerdown", () => this.stopBGM()), yt.on(Wt, this.setStateBGM, this), yt.on(Ot, this.setStateGame, this), this.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {
       yt.off(Wt, this.setStateBGM, this), yt.off(Ot, this.setStateGame, this);
     });
   }
@@ -108026,8 +108029,8 @@ class Be extends Ct.Scene {
   updateHealth(Z) {
     const k = Dt * (Z / 100);
     this.hpFill.width < k && (this.lifeWarningCondition.filter(({ activated: p, hp: S }) => p && S <= Z).forEach((p) => p.activated = !1), this.lifeWarningEvent && this.removeWarningEvent(), console.log("체력 회복: ", Z)), this.hpFill.width = Math.max(k, 0);
-    const tt = this.lifeWarningCondition.find(({ hp: rt, activated: p }) => !p && Z <= rt);
-    tt && (tt.activated = !0, this.startLifeWarning(tt));
+    const _ = this.lifeWarningCondition.find(({ hp: rt, activated: p }) => !p && Z <= rt);
+    _ && (_.activated = !0, this.startLifeWarning(_));
   }
   /**
    * 실행 중인 체력 경고 효과(깜빡임)를 중지하고 관련 리소스를 정리합니다.
@@ -108042,13 +108045,13 @@ class Be extends Ct.Scene {
    */
   startLifeWarning({ color: Z, repeat: k }) {
     this.lifeWarningEvent && this.removeWarningEvent();
-    let tt = !1;
+    let _ = !1;
     const rt = k === -1 ? -1 : k * 2 - 1;
     this.lifeWarningEvent = this.time.addEvent({
       delay: 200,
       repeat: rt,
       callback: () => {
-        tt = !tt, this.hpFill.setFillStyle(tt ? Z : Vt);
+        _ = !_, this.hpFill.setFillStyle(_ ? Z : Vt);
       },
       callbackScope: this
     });
@@ -108090,7 +108093,7 @@ class Be extends Ct.Scene {
     Object.keys(Qt).forEach((k) => this.sound.stopByKey(k)), this.sound.play(Z);
   }
 }
-class Ie extends Ct.Scene {
+class Ge extends Ct.Scene {
   constructor() {
     super("Boot");
   }
@@ -108098,15 +108101,15 @@ class Ie extends Ct.Scene {
     this.load.spritesheet(Zt, "assets/players/ice/ice_spritesheet.png", { frameWidth: kt.width, frameHeight: kt.height }), this.load.image("logo", "assets/icecandy_logo.png");
   }
   create() {
-    const { width: st, height: Z } = this.scale, k = this.add.rectangle(0, 0, st, Z, 13234170).setOrigin(0, 0), tt = this.add.image(st / 2, Z / 2, "logo").setAlpha(0);
-    tt.setY(tt.y + 100), this.addTweens({
-      targets: tt,
+    const { width: it, height: Z } = this.scale, k = this.add.rectangle(0, 0, it, Z, 13234170).setOrigin(0, 0), _ = this.add.image(it / 2, Z / 2, "logo").setAlpha(0);
+    _.setY(_.y + 100), this.addTweens({
+      targets: _,
       alpha: 1,
       y: "-=120",
       duration: 150,
       onComplete: () => {
         this.addTweens({
-          targets: tt,
+          targets: _,
           alpha: 1,
           y: "+=20",
           duration: 100
@@ -108114,13 +108117,13 @@ class Ie extends Ct.Scene {
       }
     }), this.time.delayedCall(1200, () => {
       const rt = { alpha: 0, duration: 200 };
-      this.addTweens({ targets: tt, ...rt }), this.addTweens({ targets: k, ...rt });
+      this.addTweens({ targets: _, ...rt }), this.addTweens({ targets: k, ...rt });
     }), this.time.delayedCall(1500, () => {
       this.scene.start("Preloader");
     });
   }
 }
-class Ge extends Phaser.Physics.Arcade.Sprite {
+class Ne extends Phaser.Physics.Arcade.Sprite {
   /**
    * Player 인스턴스를 생성합니다.
    * @param {object} config - 플레이어 설정 객체
@@ -108168,13 +108171,13 @@ class Ge extends Phaser.Physics.Arcade.Sprite {
    * @param {string} options.mode - 설정 모드 ('slide' 또는 'default')
    */
   setBodySize({ mode: Z = "default" }) {
-    const { width: k, height: tt } = this.bodySize;
+    const { width: k, height: _ } = this.bodySize;
     switch (Z) {
       case "slide":
-        this.setSize(k, tt / 2).setOffset(Pt.width * 0.4, 10 + tt / 2);
+        this.setSize(k, _ / 2).setOffset(Pt.width * 0.4, 10 + _ / 2);
         break;
       default:
-        this.setSize(k, tt).setOffset(Pt.width * 0.4, 10);
+        this.setSize(k, _).setOffset(Pt.width * 0.4, 10);
     }
   }
   /**
@@ -108268,14 +108271,14 @@ class Ge extends Phaser.Physics.Arcade.Sprite {
     this._changeState(Et[5]) && (this.jumpMode = null);
   }
 }
-class Ne {
+class Ue {
   /**
    * Platform 인스턴스를 생성합니다.
    * @param {object} config - 플랫폼 설정 객체
    * @param {Phaser.Scene} config.scene - 플랫폼이 속한 Scene
    * @param {object} config.properties - 맵의 전체 크기 등 속성
    */
-  constructor({ scene: st, properties: Z, key: k }) {
+  constructor({ scene: it, properties: Z, key: k }) {
     /** @type {Array<object>} 현재 화면에 로드된 맵 청크들의 정보 배열 */
     St(this, "loadedMaps", []);
     /** @type {number} 다음 맵 청크가 생성될 시작 x 좌표 */
@@ -108284,7 +108287,7 @@ class Ne {
     St(this, "currentMapIndex", 0);
     /** @type {number} 일반 맵이 생성된 횟수 (특수 맵 등장 조건에 사용) */
     St(this, "createdMapCount", 0);
-    this.scene = st, this.coins = st.coins, this.obstacles = st.obstacles, this.mapKeys = st.mapKeys, this.potionMapKeys = st.potionMapKeys, this.width = Z.width, this.height = Z.height, this.map = st.make.tilemap({
+    this.scene = it, this.coins = it.coins, this.obstacles = it.obstacles, this.mapKeys = it.mapKeys, this.potionMapKeys = it.potionMapKeys, this.width = Z.width, this.height = Z.height, this.map = it.make.tilemap({
       tileWidth: gt,
       tileHeight: gt,
       width: this.width,
@@ -108301,22 +108304,22 @@ class Ne {
    * @param {number} x - 타일 x 좌표
    * @param {number} y - 타일 y 좌표
    */
-  putTileAt(st, Z, k) {
-    this.layer.putTileAt(st, Z, k);
+  putTileAt(it, Z, k) {
+    this.layer.putTileAt(it, Z, k);
   }
   /**
    * 타일의 특정 속성을 기반으로 충돌을 설정합니다.
    * @param {object} prop - 충돌을 설정할 속성 (e.g., { collides: true })
    */
-  setCollisionByProperty(st) {
-    this.layer.setCollisionByProperty(st);
+  setCollisionByProperty(it) {
+    this.layer.setCollisionByProperty(it);
   }
   /**
    * 특정 인덱스의 타일을 제외하고 모두 충돌하도록 설정합니다.
    * @param {Array<number>} ex - 충돌에서 제외할 타일 인덱스 배열
    */
-  setCollisionByExclusion(st) {
-    this.layer.setCollisionByExclusion(st);
+  setCollisionByExclusion(it) {
+    this.layer.setCollisionByExclusion(it);
   }
   /**
    * Tiled에서 설정한 타일 애니메이션을 Phaser 애니메이션으로 생성합니다.
@@ -108324,12 +108327,12 @@ class Ne {
    * @param {string} name - 타일셋의 이름 (스프라이트 시트 키)
    * @param {Array<object>} animation - Tiled의 타일 애니메이션 데이터
    */
-  createAnimation(st, Z, k) {
+  createAnimation(it, Z, k) {
     this.scene.anims.create({
-      key: st,
-      frames: k.map((tt) => ({
+      key: it,
+      frames: k.map((_) => ({
         key: Z,
-        frame: tt.tileid
+        frame: _.tileid
       })),
       frameRate: 1500 / k[0].duration,
       repeat: -1
@@ -108339,9 +108342,9 @@ class Ne {
    * 지정된 맵 키에 해당하는 맵 청크를 게임 세계에 추가합니다.
    * @param {string} mapKey - 추가할 맵 청크의 키
    */
-  addChunk(st) {
-    const Z = this.scene.make.tilemap({ key: st }), { PLATFORM: k, ITEMS: tt, COIN: rt } = wt, p = Z.addTilesetImage(k, k);
-    this.createObjects(Z, tt), this.createObjects(Z, rt);
+  addChunk(it) {
+    const Z = this.scene.make.tilemap({ key: it }), { PLATFORM: k, ITEMS: _, COIN: rt } = wt, p = Z.addTilesetImage(k, k);
+    this.createObjects(Z, _), this.createObjects(Z, rt);
     const S = Z.createLayer(k, p, this.nextMapX, 0);
     for (let t = 0; t < Z.height; t++)
       for (let d = 0; d < Z.width; d++) {
@@ -108353,17 +108356,17 @@ class Ne {
       platformLayer: S,
       startX: this.nextMapX,
       width: Z.widthInPixels
-    }), this.nextMapX += Z.widthInPixels, this.currentMapIndex = (this.currentMapIndex + 1) % this.mapKeys.length, this.scene.cameras.main.setBounds(0, 0, this.nextMapX + this.scene.scale.width, this.scene.scale.height), this.mapKeys.includes(st) && this.createdMapCount++;
+    }), this.nextMapX += Z.widthInPixels, this.currentMapIndex = (this.currentMapIndex + 1) % this.mapKeys.length, this.scene.cameras.main.setBounds(0, 0, this.nextMapX + this.scene.scale.width, this.scene.scale.height), this.mapKeys.includes(it) && this.createdMapCount++;
   }
   /**
    * 맵 청크의 오브젝트 레이어에서 오브젝트(코인, 장애물)를 생성합니다.
    * @param {Phaser.Tilemaps.Tilemap} map - 맵 청크의 타일맵 객체
    * @param {string} name - 오브젝트 레이어의 이름 (e.g., 'ITEMS', 'COIN')
    */
-  createObjects(st, Z) {
-    const k = st.getObjectLayer(Z);
-    k && k.objects.forEach((tt) => {
-      const { x: rt, y: p, gid: S, width: t, height: d } = tt, c = we(st, S), h = S - c.firstgid, r = Z === "Coin" ? "coins" : "obstacles", n = this[r].create(rt + this.nextMapX, p, Z, h).setOrigin(0, 1).setDisplaySize(t, d).setImmovable(!1);
+  createObjects(it, Z) {
+    const k = it.getObjectLayer(Z);
+    k && k.objects.forEach((_) => {
+      const { x: rt, y: p, gid: S, width: t, height: d } = _, c = we(it, S), h = S - c.firstgid, r = Z === "Coin" ? "coins" : "obstacles", n = this[r].create(rt + this.nextMapX, p, Z, h).setOrigin(0, 1).setDisplaySize(t, d).setImmovable(!1);
       switch (n.body.setAllowGravity(!1), n.tileGid = h, r) {
         case "coins":
           n.setSize(gt * 0.8, gt * 0.8);
@@ -108386,38 +108389,38 @@ class Ne {
    * Game Scene의 update 루프에서 호출됩니다.
    * @param {number} x - 플레이어의 현재 x 좌표
    */
-  add(st) {
+  add(it) {
     if (!this.lastMap) return;
     const { startX: Z, width: k } = this.lastMap;
-    st > Z + k * 0.5 && (this.createdMapCount === me ? this.addPotionMap() : this.addNormalMap());
+    it > Z + k * 0.5 && (this.createdMapCount === me ? this.addPotionMap() : this.addNormalMap());
   }
   /**
    * 일반 맵 청크 중 하나를 무작위로 선택하여 추가합니다.
    */
   addNormalMap() {
-    const st = Math.floor(Math.random() * this.mapKeys.length);
-    this.addChunk(this.mapKeys[st]);
+    const it = Math.floor(Math.random() * this.mapKeys.length);
+    this.addChunk(this.mapKeys[it]);
   }
   /**
    * 포션 맵 청크 중 하나를 무작위로 선택하여 추가하고, 일반 맵 생성 카운트를 초기화합니다.
    */
   addPotionMap() {
-    const st = Math.floor(Math.random() * this.potionMapKeys.length);
-    this.addChunk(this.potionMapKeys[st]), this.createdMapCount = 0;
+    const it = Math.floor(Math.random() * this.potionMapKeys.length);
+    this.addChunk(this.potionMapKeys[it]), this.createdMapCount = 0;
   }
   /**
    * 플레이어의 위치를 기반으로 화면 왼쪽으로 멀어진 오래된 맵 청크를 제거합니다.
    * Game Scene의 update 루프에서 호출됩니다.
    * @param {number} x - 플레이어의 현재 x 좌표
    */
-  remove(st) {
+  remove(it) {
     if (this.loadedMaps.length > 2) {
       const Z = this.loadedMaps[0];
-      st - Z.startX > Z.width * 2 && (Z.platformLayer.destroy(), this.loadedMaps.shift());
+      it - Z.startX > Z.width * 2 && (Z.platformLayer.destroy(), this.loadedMaps.shift());
     }
   }
 }
-class Ue extends Ct.Scene {
+class Xe extends Ct.Scene {
   constructor() {
     super("Game");
     St(this, "tutorial", !0);
@@ -108468,10 +108471,10 @@ class Ue extends Ct.Scene {
   create() {
     this.coins = this.physics.add.group(), this.obstacles = this.physics.add.group(), this.scene.launch("Interface"), this.hp = 100, this.score = 0, this.playerX = 0, this.speedupCount = 0, this.speed = le, this.isGameOver = !1;
     const { width: Z, height: k } = this.scale;
-    this.background = this.add.tileSprite(0, 0, Z, k, "background").setOrigin(0, 0).setScrollFactor(0), this.player = new Ge({ scene: this, name: Se[0] }), this.player.onStand(), this.playerX = this.player.x, this.platform = new Ne({
+    this.background = this.add.tileSprite(0, 0, Z, k, "background").setOrigin(0, 0).setScrollFactor(0), this.player = new Ne({ scene: this, name: Se[0] }), this.player.onStand(), this.playerX = this.player.x, this.platform = new Ue({
       scene: this,
       properties: { width: 1e3, height: 12 }
-    }), this.startMapKeys.forEach((tt) => this.platform.addChunk(tt)), [this.jumpTouchButton, this.slideTouchButton] = this.createMobileTouchButtons(), this.setCollider(), this.setEvent(), this.cameras.main.centerOn(0, 0), this.cameras.main.startFollow(this.player, !1, 0.1, 0.1);
+    }), this.startMapKeys.forEach((_) => this.platform.addChunk(_)), [this.jumpTouchButton, this.slideTouchButton] = this.createMobileTouchButtons(), this.setCollider(), this.setEvent(), this.cameras.main.centerOn(0, 0), this.cameras.main.startFollow(this.player, !1, 0.1, 0.1);
   }
   /**
    * 모바일 환경을 위한 터치 버튼을 생성하고 배치합니다.
@@ -108480,8 +108483,8 @@ class Ue extends Ct.Scene {
   createMobileTouchButtons() {
     const k = this.add.image(0, 0, "jumpTouch").setScrollFactor(0);
     k.x = this.scale.width - 30 - k.width / 2, k.y = this.scale.height - 30 - k.height / 2, k.depth = 1;
-    const tt = this.add.image(0, 0, "slideTouch").setScrollFactor(0);
-    return tt.x = 30 + tt.width / 2, tt.y = this.scale.height - 30 - tt.height / 2, tt.depth = 1, [k, tt];
+    const _ = this.add.image(0, 0, "slideTouch").setScrollFactor(0);
+    return _.x = 30 + _.width / 2, _.y = this.scale.height - 30 - _.height / 2, _.depth = 1, Be() || (k.visible = !1, _.visible = !1), [k, _];
   }
   /**
    * 게임 내 오브젝트들 간의 물리적 충돌 및 겹침을 설정합니다.
@@ -108569,9 +108572,9 @@ class Ue extends Ct.Scene {
    * 플레이어의 점프 로직을 처리합니다. 싱글 점프와 더블 점프를 구분합니다.
    */
   onJumpPlayer() {
-    var tt, rt;
+    var _, rt;
     const Z = !this.player.jumpMode, k = this.player.jumpMode === It[0];
-    (Z || k) && (this.playEFSound("jump"), Z ? (this.player.jumpMode = It[0], ((tt = this.currTutorial) == null ? void 0 : tt.type) === "jump" && (this.currTutorial.passed = !0)) : (this.player.jumpMode = It[1], ((rt = this.currTutorial) == null ? void 0 : rt.type) === "doubleJump" && (this.currTutorial.passed = !0)), this.player.onJump());
+    (Z || k) && (this.playEFSound("jump"), Z ? (this.player.jumpMode = It[0], ((_ = this.currTutorial) == null ? void 0 : _.type) === "jump" && (this.currTutorial.passed = !0)) : (this.player.jumpMode = It[1], ((rt = this.currTutorial) == null ? void 0 : rt.type) === "doubleJump" && (this.currTutorial.passed = !0)), this.player.onJump());
   }
   /**
    * 플레이어의 슬라이드 로직을 처리합니다.
@@ -108591,8 +108594,8 @@ class Ue extends Ct.Scene {
   checkOnFloor() {
     const { body: Z } = this.player, { layer: k } = this.platform;
     if (Z.onFloor()) {
-      const tt = k.getTilesWithinWorldXY(Z.left, Z.bottom + 1, 1, 1).filter((p) => p.y >= 10);
-      return tt.filter((p) => p.index !== -1).length !== tt.length;
+      const _ = k.getTilesWithinWorldXY(Z.left, Z.bottom + 1, 1, 1).filter((p) => p.y >= 10);
+      return _.filter((p) => p.index !== -1).length !== _.length;
     }
     return !1;
   }
@@ -108618,11 +108621,11 @@ class Ue extends Ct.Scene {
     }
     if (this.isArrivedSpeedupDistance && this.increaseSpeed(), this.tutorial) {
       const k = document.querySelector(".tutorialContainer");
-      if (this.currTutorial = _t.find((tt) => !tt.passed && this.player.x > tt.distance), this.currTutorial) {
+      if (this.currTutorial = _t.find((_) => !_.passed && this.player.x > _.distance), this.currTutorial) {
         k.classList.add("show"), k.setAttribute("show", this.currTutorial.type);
         return;
       } else
-        k.classList.remove("show"), k.removeAttribute("show"), _t.find((tt) => !tt.passed) || (this.tutorial = !1);
+        k.classList.remove("show"), k.removeAttribute("show"), _t.find((_) => !_.passed) || (this.tutorial = !1);
     }
     this.player.x += this.speed;
   }
@@ -108661,7 +108664,7 @@ class Ue extends Ct.Scene {
     this.isGameOver || this.droppedPlayer || (this.updateMap(), this.updatePlayer(), this.updateBackground());
   }
 }
-class Xe extends Ct.Scene {
+class ze extends Ct.Scene {
   constructor() {
     super("GameOver");
   }
@@ -108669,10 +108672,10 @@ class Xe extends Ct.Scene {
    * Scene이 생성될 때 호출됩니다. UI 요소들을 생성하고 이벤트 리스너를 설정합니다.
    */
   create() {
-    const { width: st, height: Z } = this.scale, k = 40;
-    this.add.rectangle(0, 0, st, Z, 0).setAlpha(0.7).setOrigin(0, 0);
-    const tt = this.add.image(st / 2, Z / 2, "goMain").setInteractive({ useHandCursor: !0 }), rt = this.add.image(st / 2, Z / 2, "replay").setInteractive({ useHandCursor: !0 });
-    tt.setX(tt.x - tt.width / 2 - k), rt.setX(rt.x + rt.width / 2 + k), tt.on("pointerdown", () => {
+    const { width: it, height: Z } = this.scale, k = 40;
+    this.add.rectangle(0, 0, it, Z, 0).setAlpha(0.7).setOrigin(0, 0);
+    const _ = this.add.image(it / 2, Z / 2, "goMain").setInteractive({ useHandCursor: !0 }), rt = this.add.image(it / 2, Z / 2, "replay").setInteractive({ useHandCursor: !0 });
+    _.setX(_.x - _.width / 2 - k), rt.setX(rt.x + rt.width / 2 + k), _.on("pointerdown", () => {
       this.playButtonClickSound(), this.time.delayedCall(500, () => {
         this.scene.stop("Game"), this.scene.stop("Interface"), this.scene.start("MainMenu");
       });
@@ -108690,7 +108693,7 @@ class Xe extends Ct.Scene {
     this.sound.stopAll(), this.sound.play("button");
   }
 }
-class ze extends Ct.Scene {
+class Ve extends Ct.Scene {
   constructor() {
     super("MainMenu");
   }
@@ -108698,13 +108701,13 @@ class ze extends Ct.Scene {
     this.load.image("start", `${Tt}start_typeA.png`);
   }
   create() {
-    const { width: st, height: Z } = this.scale;
-    this.add.image(st / 2, Z / 2, "start").setInteractive({ useHandCursor: !0 }).on("pointerdown", () => {
+    const { width: it, height: Z } = this.scale, k = this.add.video(it / 2, Z / 2, "intro");
+    k.setScale(0.75), k.setLoop(!0), k.play(), this.add.image(it / 2, Z / 2, "start").setInteractive({ useHandCursor: !0 }).on("pointerdown", () => {
       setTimeout(() => this.scene.start("Game"), 500);
     });
   }
 }
-class Ve extends Ct.Scene {
+class Ye extends Ct.Scene {
   constructor() {
     super("Preloader");
   }
@@ -108716,10 +108719,10 @@ class Ve extends Ct.Scene {
     const Z = { width: 500, height: 30 }, k = {
       x: this.scale.width / 2 - Z.width / 2,
       y: this.scale.height / 2 - Z.height / 2
-    }, tt = Z.height / 2, rt = 8, p = { width: Z.width + rt, height: Z.height + rt }, S = tt + rt, t = { x: k.x - rt / 2, y: k.y - rt / 2 }, d = this.add.graphics({ fillStyle: { color: 16777215 }, lineStyle: { width: 3, color: 9751772 } });
+    }, _ = Z.height / 2, rt = 8, p = { width: Z.width + rt, height: Z.height + rt }, S = _ + rt, t = { x: k.x - rt / 2, y: k.y - rt / 2 }, d = this.add.graphics({ fillStyle: { color: 16777215 }, lineStyle: { width: 3, color: 9751772 } });
     d.fillRoundedRect(t.x, t.y, p.width, p.height, S), d.strokeRoundedRect(t.x, t.y, p.width, p.height, S);
     const c = this.add.graphics({ fillStyle: { color: 9751772 } });
-    c.fillRoundedRect(k.x, k.y, Z.height, Z.height, tt), this.anims.create({
+    c.fillRoundedRect(k.x, k.y, Z.height, Z.height, _), this.anims.create({
       key: "loading",
       frames: this.anims.generateFrameNumbers(Zt, xe),
       frameRate: ge,
@@ -108728,7 +108731,7 @@ class Ve extends Ct.Scene {
     const h = this.add.sprite(0, 0, Zt).play("loading");
     h.setScale(0.5), h.y = k.y + Z.height / 2 - h.height / 2 + 14, this.load.on("progress", (r) => {
       const n = Math.max(Z.height, Z.width * r);
-      c.clear(), c.fillRoundedRect(k.x, k.y, n, Z.height, tt), h.x = k.x + n - Z.height / 2;
+      c.clear(), c.fillRoundedRect(k.x, k.y, n, Z.height, _), h.x = k.x + n - Z.height / 2;
     });
   }
   /**
@@ -108737,15 +108740,15 @@ class Ve extends Ct.Scene {
    */
   preload() {
     this.load.image("goMain", `${Tt}gomain_typeA.png`), this.load.image("replay", `${Tt}replay_typeA.png`), this.load.image("play", `${Tt}play_typeA.png`), this.load.image("score", `${Tt}icon_score.png`), this.load.image("health", `${Tt}icon_health.png`), this.load.image(se, `${Tt}icon_speedup.png`), this.load.image(ne, `${Tt}icon_10.png`), this.load.image("pause", `${Tt}btn_pause.png`), this.load.image("play", `${Tt}btn_play.png`), this.load.image("soundOn", `${Tt}btn_sound_on.png`), this.load.image("soundOff", `${Tt}btn_sound_off.png`), this.load.image("jumpTouch", `${Tt}mobile_button_jump.png`), this.load.image("slideTouch", `${Tt}mobile_button_slide.png`), this.load.image("background", "assets/background/bg.png");
-    const { PLATFORM: st, ITEMS: Z, COIN: k } = wt;
-    this.load.image(st, `${Xt}newTiles.png`), this.load.spritesheet(Z, `${Xt}newTiles.png`, { frameWidth: gt, frameHeight: gt }), this.load.spritesheet(k, `${Xt}newTiles.png`, { frameWidth: gt, frameHeight: gt }), [Ht, bt, Kt].forEach((rt) => {
+    const { PLATFORM: it, ITEMS: Z, COIN: k } = wt;
+    this.load.image(it, `${Xt}newTiles.png`), this.load.spritesheet(Z, `${Xt}newTiles.png`, { frameWidth: gt, frameHeight: gt }), this.load.spritesheet(k, `${Xt}newTiles.png`, { frameWidth: gt, frameHeight: gt }), [Ht, bt, Kt].forEach((rt) => {
       for (let p = 0; p < rt.length; p++) {
         const S = Nt(rt.name, p);
         this.load.tilemapTiledJSON(S, `assets/map/${S}.json`);
       }
     }), this.load.spritesheet(ie, "assets/players/ice/ice_spritesheet.png", { frameWidth: Pt.width, frameHeight: Pt.height }), this.load.audio("music", `${oe}/${Re[3]}.mp3`), Object.entries(Qt).forEach(([rt, p]) => {
       this.load.audio(rt, `${he}/${p}.mp3`);
-    });
+    }), this.load.video("intro", "assets/intro.mp4", "loadeddata", !1, !1);
   }
   /**
    * preload가 완료된 후 호출됩니다.
@@ -108757,15 +108760,15 @@ class Ve extends Ct.Scene {
     });
   }
 }
-class Ye extends Ct.Scene {
+class We extends Ct.Scene {
   constructor() {
     super("Pause");
   }
   create() {
-    const { width: st, height: Z } = this.scale, k = 40;
-    this.add.rectangle(0, 0, st, Z, 0).setOrigin(0, 0).setAlpha(0.7);
-    const tt = this.add.image(st / 2, Z / 2, "goMain").setInteractive({ useHandCursor: !0 }), rt = this.add.image(st / 2, Z / 2, "play").setInteractive({ useHandCursor: !0 });
-    tt.setX(tt.x - tt.width / 2 - k), rt.setX(rt.x + rt.width / 2 + k), tt.on("pointerdown", () => {
+    const { width: it, height: Z } = this.scale, k = 40;
+    this.add.rectangle(0, 0, it, Z, 0).setOrigin(0, 0).setAlpha(0.7);
+    const _ = this.add.image(it / 2, Z / 2, "goMain").setInteractive({ useHandCursor: !0 }), rt = this.add.image(it / 2, Z / 2, "play").setInteractive({ useHandCursor: !0 });
+    _.setX(_.x - _.width / 2 - k), rt.setX(rt.x + rt.width / 2 + k), _.on("pointerdown", () => {
       this.playButtonClickSound(), this.time.delayedCall(500, () => {
         this.scene.stop("Game"), this.scene.stop("Interface"), this.scene.start("MainMenu"), this.scene.stop();
       });
@@ -108790,7 +108793,7 @@ Ct.Scene.prototype.addTweens = function(ut) {
     ...ut
   });
 };
-const We = {
+const He = {
   type: Ct.AUTO,
   width: 22 * gt,
   height: 12 * gt,
@@ -108812,15 +108815,15 @@ const We = {
     }
   },
   scene: [
-    Ie,
-    Ve,
-    ze,
-    Ue,
-    Be,
+    Ge,
     Ye,
-    Xe
+    Ve,
+    Xe,
+    Ie,
+    We,
+    ze
   ]
-}, He = (ut) => new Ct.Game({ ...We, parent: ut });
+}, be = (ut) => new Ct.Game({ ...He, parent: ut });
 document.addEventListener("DOMContentLoaded", () => {
-  He("game-container");
+  be("game-container");
 });
